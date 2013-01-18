@@ -4,20 +4,48 @@
 	color: white;
 }
 
-/***** header *****/
-
-/***** entete *****/
-
 /***** body *****/
-body{
-	width: 920px;
+body
+{
+	background: url('../images/back.png');
+}
+
+/***** wrapper *****/
+
+div#wrapper
+{
+	width: 800px;
 	margin: 0 auto;
 }
+
+/***** header *****/
+header
+{
+	margin: 0 auto;
+}
+
+header h1
+{
+	display: block;
+	width: 800px;
+	height: 150px;
+	text-indent: -5000px;
+	background: url('../images/header.png');
+}
+
+
+
+/***** entete *****/
 
 table, table td{
  border-width:1px; 
  border-style:solid; 
  border-color:black;
+}
+
+table
+{
+	margin: 0 auto;
 }
 
 #BN{
