@@ -25,7 +25,7 @@ $(function(){
 	{
 		var myClass = $(this).attr("class").split(' ');
  		var myId = $(this).closest("tr").attr("id");
-		$(this).css('background','yellow');
+		$(this).css('background','#fef5b2');
 		
 		//Cases libres en blanc
 		for (i = 0; i < 7; i++)
@@ -56,7 +56,7 @@ $(function(){
 						var attr = $("tr#"+curID+" td."+curClass).attr("class").split(' ');
 						var id = $("tr#"+curID+" td."+curClass).attr("id");
 						if(!attr[1] && !id)
-							$("tr#"+curID+" td."+curClass).css('background', 'green');
+							$("tr#"+curID+" td."+curClass).css('background', '#aacebf');
 					}
 				}
 			}
@@ -64,12 +64,32 @@ $(function(){
 		//Sinon (BN)
 		else
 		{
-			alert("C'est la BN");
+			for (var i = 0; i < 5; i++)
+			{
+				for (var y = 0; y < 5; y++)
+				{
+					var curID = (myId - 2 + i);
+					var curClass= (myClass[0] - 2 + y);
+					if(curID != myId || curClass != myClass[0])
+					{
+						if (curID >= 0 && curClass >= 0)
+						{
+						var attr = $("tr#"+curID+" td."+curClass).attr("class").split(' ');
+						var id = $("tr#"+curID+" td."+curClass).attr("id");
+						if(!attr[1] && !id)
+							$("tr#"+curID+" td."+curClass).css('background', '#aacebf');
+						}
+					}
+				}
+			}
 		}
 		
 		if(focus)
 		{
-			$(focus).css('background','#FF0000');
+			if (focus.attr('id') == "BN")
+				$(focus).css('background','#9a6e63');
+			else
+				$(focus).css('background','#eb6762');
 		}
 		focus = $(this);
 	});
