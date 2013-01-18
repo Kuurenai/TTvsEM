@@ -1,0 +1,18 @@
+body{
+	width: 920px;
+	margin: 0 auto;
+}
+.active{
+	background-color: #00b6f8;
+	color: white;
+}
+
+/***** header *****/
+
+/***** entete *****/
+
+
+/***** body *****/
+
+/***** footer *****/
+
