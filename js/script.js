@@ -56,7 +56,7 @@ $(function(){
 						var attr = $("tr#"+curID+" td."+curClass).attr("class").split(' ');
 						var id = $("tr#"+curID+" td."+curClass).attr("id");
 						if(!attr[1] && !id)
-							$("tr#"+curID+" td."+curClass).css('background', '#aacebf');
+							$("tr#"+curID+" td."+curClass).css('background', '#c3d196');
 					}
 				}
 			}
@@ -77,7 +77,7 @@ $(function(){
 						var attr = $("tr#"+curID+" td."+curClass).attr("class").split(' ');
 						var id = $("tr#"+curID+" td."+curClass).attr("id");
 						if(!attr[1] && !id)
-							$("tr#"+curID+" td."+curClass).css('background', '#aacebf');
+							$("tr#"+curID+" td."+curClass).css('background', '#c3d196');
 						}
 					}
 				}
