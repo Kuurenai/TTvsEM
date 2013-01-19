@@ -93,6 +93,7 @@ function joueurTT(){
 		}
 		focus = $(this);
 		
+		//fonction click des cases de déplacement
 		$(".C").click(function () 
 		{
 			deplacement(focus,$(this),1);
@@ -180,6 +181,7 @@ function joueurEM(){
 		}
 		focus = $(this);
 		
+		//fonction click des cases de déplacement
 		$(".C").click(function () 
 		{
 			deplacement(focus,$(this),2);
@@ -204,28 +206,39 @@ function nouvellePartie(){
 
 function jouerTour(joueur){
 
-	if(joueur == 1){
+	if(joueur == 1){ //tour du joueur 1 (TT)
 		console.log("joueur 1");
 		joueurTT();
 	}
-	else{
+	else{ //tour du joueur 2 (EM)
 		console.log("joueur 2");
 		joueurEM();
 	}
 }
 
 function deplacement(pion,choix,joueur){
+	resId = $(pion).attr("id");//si le pion est un totem
 	if(joueur == 1){
-		$(choix).removeClass('C').addClass('TT');
-		$(pion).removeClass('TT select').addClass('C');
+		if(resId){//déplacement du totem
+			$(choix).removeClass('C').attr('id','BN');
+			$(pion).removeClass('select').removeAttr('id').addClass('C');
+		}else{//déplacement du pion
+			$(choix).removeClass('C').addClass('TT');
+			$(pion).removeClass('TT select').addClass('C');
+		}
 		$(".C, .TT, #BN").off('click');
 		joueur=2;
 	}else{
-		$(choix).removeClass('C').addClass('EM');
-		$(pion).removeClass('EM select').addClass('C');
+		if(resId){//déplacement du totem
+			$(choix).removeClass('C').attr('id','EH');
+			$(pion).removeClass('select').removeAttr('id').addClass('C');
+		}else{//déplacement du pion
+			$(choix).removeClass('C').addClass('EM');
+			$(pion).removeClass('EM select').addClass('C');
+		}
 		$(".C, .EM, #EH").off('click');
 		joueur=1;
 	}
 	$(".C").removeClass('C');
-	jouerTour(joueur)
+	jouerTour(joueur); //tour du joueur suivant
 }
