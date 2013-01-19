@@ -20,7 +20,6 @@ function Joueurs(id,pion,totem,mvTotem) {
 	this.totem=totem;
 	this.mvTotem=mvTotem;
 }
-var j=1;
 
 function jouerTour(ja,jp){ //ja = joueur actif - jp = joueur passif
 //Fonction click des pions et du totem
@@ -136,6 +135,13 @@ function nouvellePartie(){
 }
 
 function jouerPartie(j1,j2){
+if(j1.id == 1){
+	$("#j1 h1").addClass('gras');
+	$("#j2 h1").removeClass('gras');
+}else{
+	$("#j2 h1").addClass('gras');
+	$("#j1 h1").removeClass('gras');
+}
 	jouerTour(j1,j2);
 }
 

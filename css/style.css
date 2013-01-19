@@ -47,6 +47,27 @@ table
 {
 	margin: 0 auto;
 }
+#j1{
+	float:left;
+	height: 380px;
+	width: 120px;
+}
+#j2{
+	float: right;
+	height: 380px;
+	width: 120px;
+}
+
+#j1 h1, #j2 h1{
+	text-align: center;
+	font-size: 20px;
+	margin:0;
+	font-weight: normal;
+}
+
+#j1 h1.gras, #j2 h1.gras{
+	font-weight:bold;
+}
 
 #BN{
 	background-color: #9a6e63;
