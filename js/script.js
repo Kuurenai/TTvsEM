@@ -82,7 +82,7 @@ function jouerTour(ja,jp){ //ja = joueur actif - jp = joueur passif
 					var curClass= (myClass[0] - 2 + y);
 					if(curID != myId || curClass != myClass[0])
 					{
-						if (curID >= 0 && curClass >= 0)
+						if (curID >= 0 && curClass >= 0 && curID <= 6 && curClass <= 9)
 						{
 							var attr = $("tr#"+curID+" td."+curClass).attr("class").split(' ');
 							var id = $("tr#"+curID+" td."+curClass).attr("id");
