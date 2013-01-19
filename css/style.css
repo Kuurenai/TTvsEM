@@ -10,6 +10,13 @@ body
 	background: url('../images/back.png');
 }
 
+*
+{
+	padding: 0;
+	margin: 0;
+	color: gray;
+}
+
 /***** wrapper *****/
 
 div#wrapper
@@ -21,16 +28,22 @@ div#wrapper
 /***** header *****/
 header
 {
-	margin: 0 auto;
+	display: block;
+	height: 100px;
+	width: 100%;
+	margin-bottom: 50px;
+	background: black;
+	box-shadow: 1px 1px 12px black;
 }
 
 header h1
 {
 	display: block;
-	width: 800px;
-	height: 150px;
+	width: 650px;
+	height: 100px;
 	text-indent: -5000px;
 	background: url('../images/header.png');
+	margin: 0 auto;
 }
 
 
@@ -74,6 +87,8 @@ table
 }
 .TT{
 	background-color: #eb6762;
+	background-image: url('../images/tt.png');
+	background-repeat: no-repeat;
 }
 
 #EH{
@@ -81,6 +96,9 @@ table
 }
 .EM{
 	background-color: #abdfde;
+	background-image: url('../images/em.png');
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .C{
