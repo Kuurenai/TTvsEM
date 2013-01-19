@@ -118,18 +118,18 @@ function jouerTour(ja,jp){ //ja = joueur actif - jp = joueur passif
 
 function nouvellePartie(){
 	//initialisation des joueurs
-	joueur1=new Joueurs(1,'TT','BN',3);
-	joueur2=new Joueurs(2,'EM','EH',3);
+	joueur1=new Joueurs(1,'EM','EH',3);
+	joueur2=new Joueurs(2,'TT','BN',3);
 
 	//Ajout des id des totems
-	$("#plateau tr#3 td.0").attr('id', "BN");
-	$("#plateau tr#3 td.9").attr('id', "EH");
+	$("#plateau tr#3 td.0").attr('id', "EH");
+	$("#plateau tr#3 td.9").attr('id', "BN");
 	
 	//Ajout des classes TT(Col. 1) et EM(Col. 8) de la case 1 à 6
 	for(t = 1; t < 6; t++)
 	{
-		$("#plateau tr#"+ t +" td.1").addClass("TT");
-		$("#plateau tr#"+ t +" td.8").addClass("EM");
+		$("#plateau tr#"+ t +" td.1").addClass("EM");
+		$("#plateau tr#"+ t +" td.8").addClass("TT");
 	}
 	jouerPartie(joueur1,joueur2);
 }
