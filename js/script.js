@@ -20,7 +20,7 @@ function joueurTT(){
 	{
 		var myClass = $(this).attr("class").split(' ');
  		var myId = $(this).closest("tr").attr("id");
-		$(this).css('background','#fef5b2');
+		$(this).addClass("select");
 		
 		//Cases libres en blanc
 		for (i = 0; i < 7; i++)
@@ -31,8 +31,8 @@ function joueurTT(){
 				resId = $("#plateau tr#"+ i + " td."+j).attr("id");
 				if(!resId && !resClass[1])
 				{
-					$("#plateau tr#"+ i + " td."+j).css('background', 'white')/*.removeClass('C')*/;
-					//$("#plateau tr#"+ i + " td."+j).removeClass('C');
+					$(".C").off('click');
+					$(".C").removeClass('C');
 				}
 			}
 		}
@@ -52,7 +52,9 @@ function joueurTT(){
 						var attr = $("tr#"+curID+" td."+curClass).attr("class").split(' ');
 						var id = $("tr#"+curID+" td."+curClass).attr("id");
 						if(!attr[1] && !id)
-							$("tr#"+curID+" td."+curClass).css('background', '#c3d196');
+						{
+							$("tr#"+curID+" td."+curClass).addClass('C');
+						}
 					}
 				}
 			}
@@ -74,8 +76,7 @@ function joueurTT(){
 							var id = $("tr#"+curID+" td."+curClass).attr("id");
 							if(!attr[1] && !id)
 							{
-								$("tr#"+curID+" td."+curClass).css('background', '#c3d196')/*.addClass('C')*/;
-								//$("tr#"+curID+" td."+curClass).addClass('C');
+								$("tr#"+curID+" td."+curClass).addClass('C');
 							}
 						}
 					}
@@ -86,19 +87,17 @@ function joueurTT(){
 		if(focus)
 		{
 			if (focus.attr('id') == "BN")
-				$(focus).css('background','#9a6e63');
+				$(focus).removeClass("select");
 			else
-				$(focus).css('background','#eb6762');
+				$(focus).removeClass("select");
 		}
 		focus = $(this);
 		
-		/*$(".C").click(function () 
+		$(".C").click(function () 
 		{
-		});*/
+			deplacement(focus,$(this),1);
+		});
 	});
-	
-	
-	
 }
 
 function joueurEM(){
@@ -108,7 +107,7 @@ function joueurEM(){
 	{
 		var myClass = $(this).attr("class").split(' ');
  		var myId = $(this).closest("tr").attr("id");
-		$(this).css('background','#fef5b2');
+		$(this).addClass("select");
 		
 		//Cases libres en blanc
 		for (i = 0; i < 7; i++)
@@ -119,7 +118,8 @@ function joueurEM(){
 				resId = $("#plateau tr#"+ i + " td."+j).attr("id");
 				if(!resId && !resClass[1])
 				{
-					$("#plateau tr#"+ i + " td."+j).css('background', 'white');
+					$(".C").off('click');
+					$(".C").removeClass('C');
 				}
 			}
 		}
@@ -139,7 +139,9 @@ function joueurEM(){
 						var attr = $("tr#"+curID+" td."+curClass).attr("class").split(' ');
 						var id = $("tr#"+curID+" td."+curClass).attr("id");
 						if(!attr[1] && !id)
-							$("tr#"+curID+" td."+curClass).css('background', '#c3d196');
+						{
+							$("tr#"+curID+" td."+curClass).addClass('C');
+						}
 					}
 				}
 			}
@@ -157,10 +159,12 @@ function joueurEM(){
 					{
 						if (curID >= 0 && curClass >= 0)
 						{
-						var attr = $("tr#"+curID+" td."+curClass).attr("class").split(' ');
-						var id = $("tr#"+curID+" td."+curClass).attr("id");
-						if(!attr[1] && !id)
-							$("tr#"+curID+" td."+curClass).css('background', '#c3d196');
+							var attr = $("tr#"+curID+" td."+curClass).attr("class").split(' ');
+							var id = $("tr#"+curID+" td."+curClass).attr("id");
+							if(!attr[1] && !id)
+							{
+								$("tr#"+curID+" td."+curClass).addClass('C');
+							}
 						}
 					}
 				}
@@ -170,11 +174,16 @@ function joueurEM(){
 		if(focus)
 		{
 			if (focus.attr('id') == "EH")
-				$(focus).css('background','#3f689e');
+				$(focus).removeClass("select");
 			else
-				$(focus).css('background','#abdfde');
+				$(focus).removeClass("select");
 		}
 		focus = $(this);
+		
+		$(".C").click(function () 
+		{
+			deplacement(focus,$(this),2);
+		});
 	});
 }
 
@@ -196,15 +205,27 @@ function nouvellePartie(){
 function jouerTour(joueur){
 
 	if(joueur == 1){
+		console.log("joueur 1");
 		joueurTT();
-		jouerTour(2);
-	}/*
+	}
 	else{
+		console.log("joueur 2");
 		joueurEM();
-		jouerTour(1);
-	}*/
+	}
 }
 
-function deplacement(pion,choix){
-
+function deplacement(pion,choix,joueur){
+	if(joueur == 1){
+		$(choix).removeClass('C').addClass('TT');
+		$(pion).removeClass('TT select').addClass('C');
+		$(".C, .TT, #BN").off('click');
+		joueur=2;
+	}else{
+		$(choix).removeClass('C').addClass('EM');
+		$(pion).removeClass('EM select').addClass('C');
+		$(".C, .EM, #EH").off('click');
+		joueur=1;
+	}
+	$(".C").removeClass('C');
+	jouerTour(joueur)
 }

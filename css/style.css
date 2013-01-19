@@ -61,5 +61,14 @@ table
 .EM{
 	background-color: #abdfde;
 }
+
+.C{
+	background-color: #c3d196;
+}
+
+.select, #BN.select, #EH.select{
+	background-color: #fef5b2;
+}
+
 /***** footer *****/
 
