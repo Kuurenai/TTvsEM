@@ -68,16 +68,7 @@ table
 }
 
 #j1{
-	float:left;
-<<<<<<< HEAD
-	height: 380px;
-	width: 130px;
-}
-#j2{
-	float: right;
-	height: 380px;
-	width: 130px;
-=======
+	float: left;
 	height: 41px;
 	width: 200px;
 	background: url('../images/headplayer.png');
@@ -87,7 +78,6 @@ table
 	height: 41px;
 	width: 200px;
 	background: url('../images/headplayer.png');
->>>>>>> Design
 }
 
 #j1 h1, #j2 h1{
@@ -96,6 +86,13 @@ table
 	margin:0;
 	font-weight: normal;
 	color: #e6ecc8;
+	font-family: 'Lobster';
+	margin-bottom: 20px;
+}
+
+#mvEH, #mvBN
+{
+	text-align: center;
 	font-family: 'Lobster';
 }
 
