@@ -165,6 +165,7 @@ function deplacement(pion,choix,ja,jp){
 				$(choix).removeClass(jp.pion);
 			}
 			if(resIdC==jp.totem){
+				$(".C, ."+ja.pion+", #"+ja.totem).off('click');
 				alert("Victoire du joueur"+ja.id);
 				nouvellePartie();
 			}
@@ -176,6 +177,7 @@ function deplacement(pion,choix,ja,jp){
 				$(choix).removeClass(jp.pion);
 			}
 			if($(choix).attr("id")){
+				$(".C, ."+ja.pion+", #"+ja.totem).off('click');
 				alert("Victoire du joueur"+ja.id);
 				nouvellePartie();
 			}
