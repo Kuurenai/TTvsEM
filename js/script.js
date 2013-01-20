@@ -135,8 +135,8 @@ function nouvellePartie(){
 
 function jouerPartie(j1,j2){
 	if(j1.id == 1){
-		$("#mvEH").text("mouvement restant: "+j1.mvTotem);
-		$("#mvBN").text("mouvement restant: "+j2.mvTotem);
+		$("#mvEH").text(j1.mvTotem + " mouvements de totem restants");
+		$("#mvBN").text(j2.mvTotem + " mouvements de totem restants");
 		$("#j1 h1").addClass('gras');
 		$("#j2 h1").removeClass('gras');
 	}else{
