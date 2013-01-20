@@ -135,13 +135,17 @@ function nouvellePartie(){
 
 function jouerPartie(j1,j2){
 	if(j1.id == 1){
-		$("#mvEH").text(j1.mvTotem + " mouvements de totem restants");
-		$("#mvBN").text(j2.mvTotem + " mouvements de totem restants");
+		$("#nbmvEH").text(j1.mvTotem);
+		$("#nbmvBN").text(j2.mvTotem);
+		$("#mvEH").text("mouvements de totem restants");
+		$("#mvBN").text("mouvements de totem restants");
 		$("#j1 h1").addClass('gras');
 		$("#j2 h1").removeClass('gras');
 	}else{
-		$("#mvBN").text("mouvement restant: "+j1.mvTotem);
-		$("#mvEH").text("mouvement restant: "+j2.mvTotem);
+		$("#nbmvEH").text(j1.mvTotem);
+		$("#nbmvBN").text(j2.mvTotem);
+		$("#mvBN").text("mouvements de totem restants");
+		$("#mvEH").text("mouvements de totem restants");
 		$("#j2 h1").addClass('gras');
 		$("#j1 h1").removeClass('gras');
 	}

@@ -1,7 +1,20 @@
 @font-face
 {
-font-family: Lobster;
+font-family: 'Lobster';
 src: url('../fonts/Lobster.otf');
+}
+
+@font-face
+{
+font-family: 'League_Gothic';
+src: url('../fonts/League_Gothic.otf');
+}
+
+
+@font-face
+{
+font-family: 'Colleged';
+src: url('../fonts/Colleged.ttf');
 }
 
 
@@ -14,7 +27,7 @@ src: url('../fonts/Lobster.otf');
 /***** body *****/
 body
 {
-	background: url('../images/back.png');
+	background: url('../images/back2.png') top repeat-y, url('../images/back.png') ;
 }
 
 *
@@ -25,9 +38,9 @@ body
 
 /***** wrapper *****/
 
-div#wrapper
+div.wrapper
 {
-	width: 1000px;
+	width: 940px;
 	margin: 0 auto;
 }
 
@@ -35,23 +48,38 @@ div#wrapper
 header
 {
 	display: block;
-	height: 100px;
+	height: 150px;
 	width: 100%;
 	margin-bottom: 50px;
-	background: black;
-	box-shadow: 1px 1px 12px black;
+	background: url('../images/header.png') top no-repeat;
 }
 
 header h1
 {
-	display: block;
-	width: 650px;
-	height: 100px;
-	text-indent: -5000px;
-	background: url('../images/header.png');
-	margin: 0 auto;
+	padding: 18px;
+	text-align: center;
+	font-family: 'Lobster';
+	font-size: 3em;
+	color: white;
 }
 
+header h1 em#headTT
+{
+	font-family: 'League_Gothic';
+	font-style: normal;
+	text-transform: uppercase;
+	color: #e46420;
+	text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white
+}
+
+header h1 em#headEM
+{
+	font-family: 'League_Gothic';
+	font-style: normal;
+	text-transform: uppercase;
+	color: #28aae1;
+	text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white
+}
 
 
 /***** entete *****/
@@ -65,19 +93,20 @@ table, table td{
 table
 {
 	margin: 0 auto;
+	background: url('../images/backgame.png') center no-repeat;
 }
 
 #j1{
 	float: left;
-	height: 41px;
+	height: 49px;
 	width: 200px;
-	background: url('../images/headplayer.png');
+	background: url('../images/headplayer2.png') top no-repeat, url('../images/player.png') top no-repeat;
 }
 #j2{
 	float: right;
-	height: 41px;
+	height: 49px;
 	width: 200px;
-	background: url('../images/headplayer.png');
+	background: url('../images/headplayer2.png') top no-repeat, url('../images/player.png') top no-repeat;
 }
 
 #j1 h1, #j2 h1{
@@ -87,13 +116,38 @@ table
 	font-weight: normal;
 	color: #e6ecc8;
 	font-family: 'Lobster';
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 }
 
 #mvEH, #mvBN
 {
 	text-align: center;
 	font-family: 'Lobster';
+	color: #e6ecc8;
+	text-shadow: 0 0 0.2em #c98149, 0 0 0.2em #c98149, 0 0 0.2em #c98149;
+	font-size: 1.2em;
+	background: url('../images/player.png') top no-repeat;
+	padding: 20px;
+	display: block;
+	margin: 0 auto;
+	width: 90px;
+	height: 160px;
+}
+
+#nbmvEH, #nbmvBN
+{
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Colleged';
+	color: #e6ecc8;
+	/*text-shadow: 0 0 0.2em #c98149, 0 0 0.2em #c98149, 0 0 0.2em #c98149;*/
+	font-size: 6em;
+	width: 90px;
+	padding: 20px;
+	margin-bottom: -30px;
+	height: 90px;
+	background: url('../images/player.png') top no-repeat;
 }
 
 #j1 h1.gras, #j2 h1.gras{
@@ -103,33 +157,37 @@ table
 }
 
 #BN{
+	background-color: rgba(252, 224, 184, 0.5);
 	background-image: url('../images/bn.png');
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .TT{
+	background-color: rgba(228, 100, 32 ,0.5);
 	background-image: url('../images/tt.png');
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 #EH{
+	background-color: rgba(82, 44, 31, 0.5);
 	background-image: url('../images/eh.png');
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .EM{
+	background-color: rgba(40, 170, 225, 0.5);
 	background-image: url('../images/em.png');
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 .C{
-	background-color: #c3d196;
+	background-color: rgba(195, 209, 150, 0.5);
 }
 
 .select, #BN.select, #EH.select{
-	background-color: #fef5b2;
+	background-color: rgba(254, 245, 178, 0.5);
 }
 
 /***** footer *****/
