@@ -142,8 +142,8 @@ function jouerPartie(j1,j2){
 		$("#j1 h1").addClass('gras');
 		$("#j2 h1").removeClass('gras');
 	}else{
-		$("#nbmvEH").text(j1.mvTotem);
-		$("#nbmvBN").text(j2.mvTotem);
+		$("#nbmvEH").text(j2.mvTotem);
+		$("#nbmvBN").text(j1.mvTotem);
 		$("#mvBN").text("mouvements de totem restants");
 		$("#mvEH").text("mouvements de totem restants");
 		$("#j2 h1").addClass('gras');
