@@ -238,7 +238,36 @@ table
 }
 
 /***** footer *****/
-footer
+
+#pied{
+	position: absolute;
+	bottom: 0px;
+	height: 100px;
+	margin-left: -24px;
+	width: 987px;
+	background: url('../images/footer.png') no-repeat;
+	text-align: center;
+}
+
+#pied p
 {
 	display: block;
+	margin: 0 auto;
+	width: 200px;
+	height: 75px;
+	margin-top: 25px;
+	font-family: 'League_Gothic';
+	text-transform: uppercase;
+	font-size: 1.3em;
+	color:white;
+	line-height: 20px;
+}
+
+#pied p em
+{
+	font-family: 'Lobster';
+	font-style: normal;
+	text-transform: none;
+	text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white;
+	color: rgb(77, 109, 43);
 }
