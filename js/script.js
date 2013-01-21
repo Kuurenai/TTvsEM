@@ -139,6 +139,7 @@ function jouerPartie(j1,j2){
 		$("#nbmvBN").text(j2.mvTotem);
 		$("#mvEH").text("mouvements de totem restants");
 		$("#mvBN").text("mouvements de totem restants");
+		$("#headplateau").text("C'est à Joueur 1 de jouer !");
 		$("#j1 h1").addClass('gras');
 		$("#j2 h1").removeClass('gras');
 	}else{
@@ -146,6 +147,7 @@ function jouerPartie(j1,j2){
 		$("#nbmvBN").text(j1.mvTotem);
 		$("#mvBN").text("mouvements de totem restants");
 		$("#mvEH").text("mouvements de totem restants");
+		$("#headplateau").text("C'est à Joueur 2 de jouer !");
 		$("#j2 h1").addClass('gras');
 		$("#j1 h1").removeClass('gras');
 	}

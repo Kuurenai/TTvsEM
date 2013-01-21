@@ -48,9 +48,9 @@ div.wrapper
 header
 {
 	display: block;
-	height: 150px;
+	height: 100px;
 	width: 100%;
-	margin-bottom: 50px;
+	margin-bottom: 5%;
 	background: url('../images/header.png') top no-repeat;
 }
 
@@ -84,15 +84,30 @@ header h1 em#headEM
 
 /***** entete *****/
 
+h1#headplateau
+{
+	display: block;
+	width:722px;
+	height:81px;
+	text-align: center;
+	margin: 0 auto;
+	background: url('../images/headplateau.png') no-repeat top;
+	color: #c98149;
+	padding-top: 5px;
+	font-family: 'Lobster';
+	text-shadow: 0 0 0.2em #e6ecc8, 0 0 0.2em #e6ecc8, 0 0 0.2em #e6ecc8;
+}
+
 table, table td{
  border-width:1px; 
  border-style:solid; 
- border-color:black;
+ border-color:rgba(167, 86, 86, 0.5);
+	box-shadow: 1px 1px 12px #e26664;
 }
 
 table
 {
-	margin: 0 auto;
+	margin: -33px auto 0 auto;
 	background: url('../images/backgame.png') center no-repeat;
 }
 
@@ -117,6 +132,38 @@ table
 	color: #e6ecc8;
 	font-family: 'Lobster';
 	margin-bottom: 0px;
+}
+
+#j1 a
+{
+	display: block;
+	background: url('../images/surrender1.png') no-repeat;
+	margin: -90px 0 0 12px;
+	width: 90px;
+	height: 43px;
+	color: #e6ecc8;
+	text-shadow: 0 0 0.2em #c98149, 0 0 0.2em #c98149, 0 0 0.2em #c98149;
+	font-family: 'League_Gothic';
+	text-transform: uppercase;
+	font-size: 1.2em;
+	padding: 3px 0 0 20px;
+	text-decoration: none;
+}
+
+#j2 a
+{
+	display: block;
+	background: url('../images/surrender2.png') no-repeat;
+	margin: -90px 0 0 100px;
+	width: 90px;
+	height: 43px;
+	color: #e6ecc8;
+	text-shadow: 0 0 0.2em #c98149, 0 0 0.2em #c98149, 0 0 0.2em #c98149;
+	font-family: 'League_Gothic';
+	text-transform: uppercase;
+	font-size: 1.2em;
+	padding: 3px 0 0 12px;
+	text-decoration: none;
 }
 
 #mvEH, #mvBN
@@ -191,4 +238,7 @@ table
 }
 
 /***** footer *****/
-
+footer
+{
+	display: block;
+}
