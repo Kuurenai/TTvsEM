@@ -98,6 +98,15 @@ h1#headplateau
 	text-shadow: 0 0 0.2em #e6ecc8, 0 0 0.2em #e6ecc8, 0 0 0.2em #e6ecc8;
 }
 
+h2{
+	position: relative;
+	top:380px;
+	text-align: center;
+	margin: 0 auto;
+	color: #c98149;
+	font-family: 'Lobster';
+}
+
 table, table td{
  border-width:1px; 
  border-style:solid; 

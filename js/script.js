@@ -13,14 +13,15 @@ $(function(){
 });
 
 // classe joueur
-function Joueurs(id,pion,totem,mvTotem) {
+function Joueurs(id,pion,totem,mvTotem,pts) {
 	this.id=id;
 	this.pion=pion;
 	this.totem=totem;
 	this.mvTotem=mvTotem;
+	this.pts=pts;
 }
-var joueur1=new Joueurs(1,'EM','EH',3);
-var joueur2=new Joueurs(2,'TT','BN',3);
+var joueur1=new Joueurs(1,'EM','EH',3,0);
+var joueur2=new Joueurs(2,'TT','BN',3,0);
 var focus;
 function jouerTour(ja,jp){ //ja = joueur actif - jp = joueur passif
 //Fonction click des pions et du totem
@@ -128,6 +129,7 @@ function nouvellePartie(){
 		$("#plateau tr#"+ t +" td.1").addClass("EM");
 		$("#plateau tr#"+ t +" td.8").addClass("TT");
 	}
+	$(".wrapper h2").text(joueur1.pts+" - "+joueur2.pts);
 	joueur1.mvTotem=3;
 	joueur2.mvTotem=3;
 	jouerPartie(joueur1,joueur2);
@@ -167,9 +169,7 @@ function deplacement(pion,choix,ja,jp){
 				$(choix).removeClass(jp.pion);
 			}
 			if(resIdC==jp.totem){
-				$(".C, ."+ja.pion+", #"+ja.totem).off('click');
-				alert("Victoire du joueur"+ja.id);
-				nouvellePartie();
+				victoire(ja);
 			}
 		}else{//déplacement du pion
 			$(choix).removeClass('C').addClass(ja.pion);
@@ -179,11 +179,16 @@ function deplacement(pion,choix,ja,jp){
 				$(choix).removeClass(jp.pion);
 			}
 			if($(choix).attr("id")){
-				$(".C, ."+ja.pion+", #"+ja.totem).off('click');
-				alert("Victoire du joueur"+ja.id);
-				nouvellePartie();
+				victoire(ja);
 			}
 		}
 		$(".C, ."+ja.pion+", #"+ja.totem).off('click');
 		$(".C").removeClass('C');
+}
+
+function victoire(joueur){
+	$(".C, ."+joueur.pion+", #"+joueur.totem).off('click');
+	alert("Victoire du joueur"+joueur.id);
+	joueur.pts++;
+	nouvellePartie();
 }

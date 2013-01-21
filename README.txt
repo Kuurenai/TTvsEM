@@ -1,7 +1,6 @@
 a faire :
 
-- bouton d'abandon
-- compteur de point
+- compteur de point placement et designe a faire
 - overlay :
 	* regle du jeu
 	* popup fin de partie
