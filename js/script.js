@@ -86,7 +86,7 @@ function jouerTour(ja,jp){ //ja = joueur actif - jp = joueur passif
 						{
 							var attr = $("tr#"+curID+" td."+curClass).attr("class").split(' ');
 							var id = $("tr#"+curID+" td."+curClass).attr("id");
-							if(attr[1]!=ja.pion && id!=ja.totem)
+							if(!attr[1] && !id)
 							{
 								$("tr#"+curID+" td."+curClass).addClass('C');
 							}

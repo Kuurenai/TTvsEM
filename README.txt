@@ -1,7 +1,7 @@
-à faire :
-- corrige les totem pour qu'ils ne puissent plus "manger"
+a faire :
+
 - bouton d'abandon
 - compteur de point
 - overlay :
-	* règle du jeu
+	* regle du jeu
 	* popup fin de partie
