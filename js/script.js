@@ -129,7 +129,8 @@ function nouvellePartie(){
 		$("#plateau tr#"+ t +" td.1").addClass("EM");
 		$("#plateau tr#"+ t +" td.8").addClass("TT");
 	}
-	$(".wrapper h2").text(joueur1.pts+" - "+joueur2.pts);
+	$("#vj1").text(joueur1.pts + " victoires !");
+	$("#vj2").text(joueur2.pts + " victoires !");
 	joueur1.mvTotem=3;
 	joueur2.mvTotem=3;
 	jouerPartie(joueur1,joueur2);
