@@ -147,7 +147,7 @@ table
 {
 	display: block;
 	background: url('../images/surrender1.png') no-repeat;
-	margin: -90px 0 0 12px;
+	margin: -100px 0 0 12px;
 	width: 90px;
 	height: 43px;
 	color: #e6ecc8;
@@ -163,7 +163,7 @@ table
 {
 	display: block;
 	background: url('../images/surrender2.png') no-repeat;
-	margin: -90px 0 0 100px;
+	margin: -100px 0 0 100px;
 	width: 90px;
 	height: 43px;
 	color: #e6ecc8;
@@ -254,7 +254,7 @@ table
 	text-align: center;
 	background: url('../images/headscore.png') no-repeat;
 	padding-top: 20px;
-	margin-top: -8px;
+	margin-top: 0px;
 	font-family: 'Lobster';
 	font-size: 1.2em;
 	color: #c98149;	
