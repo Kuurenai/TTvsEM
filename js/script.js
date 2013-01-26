@@ -118,7 +118,7 @@ function jouerTour(ja,jp){ //ja = joueur actif - jp = joueur passif
 
 function nouvellePartie(){
 	//initialisation des joueurs
-	$(".EM, #EH, .TT, #BN").removeAttr('id').removeClass('TT').removeClass('EM');
+	$(".EM, #EH, .TT, #BN").removeAttr('id').removeClass('TT').removeClass('EM').removeClass('select');
 	//Ajout des id des totems
 	$("#plateau tr#3 td.0").attr('id', "EH");
 	$("#plateau tr#3 td.9").attr('id', "BN");
