@@ -42,6 +42,7 @@ div.wrapper
 {
 	width: 940px;
 	margin: 0 auto;
+	min-height: 430px;
 }
 
 /***** header *****/
@@ -294,4 +295,11 @@ table
 	text-transform: none;
 	text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white;
 	color: rgb(77, 109, 43);
+}
+
+
+@media screen and (max-height: 710px) {
+	#pied{
+		display: none;
+	}
 }
